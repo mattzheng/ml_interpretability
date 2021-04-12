@@ -19,11 +19,13 @@ pip install catboost
 不过,老是报错,就直接随便从网上搜索下载了...
 
 ## 关联文章
-[机器学习模型可解释性进行到底 —— 从SHAP值到预测概率（二）](https://mattzheng.blog.csdn.net/article/details/115556182)
-[机器学习模型可解释性进行到底 —— SHAP值理论（一）](https://blog.csdn.net/sinat_26917383/article/details/115400327)
+
+- [机器学习模型可解释性进行到底 —— 从SHAP值到预测概率（二）](https://mattzheng.blog.csdn.net/article/details/115556182)
+- [机器学习模型可解释性进行到底 —— SHAP值理论（一）](https://blog.csdn.net/sinat_26917383/article/details/115400327)
 
 
 ## shap值映射向概率
+
 借助的是一元线性插值的方式，参考：
 [Scipy Tutorial-插值interp1d](http://liao.cpython.org/scipytutorial10/)
 
