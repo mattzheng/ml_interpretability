@@ -34,3 +34,22 @@ shap_temp = shap_temp.head().applymap(lambda x:('+'if x>0 else '')+str(round(x*1
 
 shap_temp.style.apply(lambda x: ["background:orangered" if float(v[:-1])<0 else "background:lightgreen"
                                 for v in x], axis = 1)
+
+# 影响分析
+from util import partial_deltaprob_v2 ,plot_df
+
+# 单特征分析
+shap_temp = shap2deltaprob_v2(shap_df, 
+                   probas_xgb,
+                   func_shap2probas = 'interp1d')
+
+
+feature = 'RAD' # 一个特征
+dp_col = shap_temp
+out = partial_deltaprob_v2(feature, X, dp_col, cutoffs = None )
+
+plot_df(out)
+
+
+# 特征交叉分析 - 分组汇总,不封装了...
+
