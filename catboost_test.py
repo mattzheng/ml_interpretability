@@ -73,3 +73,28 @@ shap_temp.style.apply(lambda x: ["background:orangered" if float(v[:-1])<0 else 
                                 for v in x], axis = 1)
 
 
+# 影响分析
+from util import partial_deltaprob_v2 
+
+# 单特征分析
+shap_temp = shap2deltaprob_v2(shap_df, 
+                   probas_xgb,
+                   func_shap2probas = 'interp1d')
+
+feature = 'Sex' # 一个特征
+dp_col = shap_temp
+out = partial_deltaprob_v2(feature, X_all, dp_col, cutoffs = None )
+
+out = partial_deltaprob_v2('Pclass', X_all, dp_col, cutoffs = None )
+
+out = partial_deltaprob_v2('Fare', X_all, dp_col,
+                               cutoffs = [0,25,50,75,100,X_train['Fare'].max()])
+
+
+plot_df(out)
+
+# 特征交叉分析 - 分组汇总,不封装了...
+
+
+
+
