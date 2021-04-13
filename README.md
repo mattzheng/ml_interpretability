@@ -28,7 +28,7 @@ pip install catboost
 
 - catboost_test.py - 测试catboost&shap值的demo
 - xgboost_test.py - 测试xgb&shap值的demo
-- pdd_ice_test.py - PDD / ICE的画图demo
+- pdd_ice_test.py - PDD / ICE的画图demo, **需要sklearn 0.24+**
 
 ## shap值映射向概率
 
