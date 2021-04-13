@@ -22,7 +22,7 @@ pip install catboost
 
 - [机器学习模型可解释性进行到底 —— 从SHAP值到预测概率（二）](https://mattzheng.blog.csdn.net/article/details/115556182)
 - [机器学习模型可解释性进行到底 —— SHAP值理论（一）](https://blog.csdn.net/sinat_26917383/article/details/115400327)
-
+- [机器学习模型可解释性进行到底 ——PDP&ICE图（三）](https://mattzheng.blog.csdn.net/article/details/115669705)
 
 ## shap值映射向概率
 
